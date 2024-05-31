@@ -1,0 +1,215 @@
+/* Reset */
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/image4.jpg); /* Add background image */
+    background-size: cover; /* Cover the entire body */
+    background-repeat: no-repeat; /* Prevent repeating the background image */
+    background-attachment: fixed; /* Keep the background image fixed while scrolling */
+}
+
+/* Rest of your CSS styles */
+/* Add the following CSS to make the sections display horizontally */
+
+/* Main Styles */
+main {
+    padding: 20px;
+    display: flex; /* Add flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+/* Section Styles */
+.library-container, .suggestions-container, .queue-container {
+    flex: 1; /* Equal width for all sections */
+    margin-right: 20px; /* Add space between sections */
+}
+
+.library, .suggestions, .queue {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for each section */
+}
+
+.library h2, .suggestions h2, .queue h2 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px; 
+    text-align: center; /* Center the heading */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .library-container, .suggestions-container, .queue-container {
+        flex-basis: 100%; /* Full width on smaller screens */
+        margin-right: 0; /* Remove margin on smaller screens */
+        margin-bottom: 20px; /* Add space between sections on smaller screens */
+    }
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(21, 40, 40);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.logo p {
+    color: rgb(5, 62, 85);
+    font-size: 20px;
+    font-weight: bold; 
+    font-style: italic; 
+    font-family: 'Algerian', serif; 
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: bold; 
+    font-style: italic; 
+    font-family: 'Algerian', serif; 
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(21, 40, 40);
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    width: max-content; 
+    z-index: 1; 
+}
+
+.dropdown li {
+    margin: 5px 0;
+}
+
+.dropdown li a {
+    display: block; 
+    padding: 5px 15px; 
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+.search input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.search button {
+    padding: 8px 100px;
+    background-color: rgb(0, 84, 29);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: rgb(65, 157, 81);
+}
+
+.library, .suggestions, .queue {
+    margin-bottom: 40px;
+}
+
+.library h2, .suggestions h2, .queue h2 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px; 
+}
+
+.background-image {
+    background-image: url(images/image4.jpg);
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.event {
+    display: inline-block;
+    width: 100%;
+    margin: 20px;
+    position: relative;
+    vertical-align: top; 
+}
+
+.event-overlay {
+    position: relative; 
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    background-size: cover; 
+    background-position: center; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-overlay h3 {
+    color: white;
+}
+
+.event button {
+    background-color: rgb(0, 84, 29);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+}
+
+.event button:hover {
+    background-color: rgb(65, 157, 81);
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Recommendations</title>
+</head>
+<body>
+    <h1>Song Recommendations</h1>
+    {% for song in songs_info %}
+    <h2>Input Song</h2>
+    <p>Album: {{ song.input_song.album }}</p>
+    <p>Artist: {{ song.input_song.artist }}</p>
+    <h3>Similar Songs</h3>
+    <ul>
+        {% for similar_song in song.similar_songs %}
+        <li>
+            <p>Album: {{ similar_song.album }}</p>
+            <p>Artist: {{ similar_song.artist }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</body>
+</html>
